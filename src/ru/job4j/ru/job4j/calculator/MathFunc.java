@@ -17,6 +17,9 @@ public class MathFunc {
         int result2 = MathFunc.func1(5);
         int total = result1 + result2;
         System.out.println(total);
+
+        int result = MathFunc.func1(100);
+        System.out.println(result);
     }
 
 
