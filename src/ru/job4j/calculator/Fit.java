@@ -17,8 +17,8 @@ public class Fit {
         double manWeight = Fit.manWeight(180d);
         double womanWeight = Fit.manWeight(165d);
         System.out.println("Идеальный вес мужчины с ростом 180см = " +
-                            manWeight + " \nИдеальный вес женщины с " +
-                            "ростом 165см = " + womanWeight);
+                            manWeight + " \nИдеальный вес женщины с ростом 165см = "
+                            + womanWeight);
     }
 
 }
