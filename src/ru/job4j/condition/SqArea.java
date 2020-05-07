@@ -9,9 +9,7 @@ public class SqArea {
 
         s = L * h;
 
-        h = s/L;
-
-        return h;
+        return s;
     }
 
     public static void main(String[] args) {
