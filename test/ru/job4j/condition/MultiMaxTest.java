@@ -20,9 +20,9 @@ public class MultiMaxTest {
     }
 
     @Test
-    public void whenConvert180RblThen3Dlr() {
+    public void whenThirdMax() {
         int expected = 3;
-        int out = MultiMax.max(1,2,3);
+        int out = MultiMax.max(2,2,3);
         Assert.assertEquals(expected, out);
     }
 }
