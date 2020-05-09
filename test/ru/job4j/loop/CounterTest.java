@@ -20,8 +20,15 @@ public class CounterTest {
     }
 
     @Test
-    public void whenStart3AndFinish8() {
+    public void whenStart3AndFinish8JustForEven() {
         int result = Counter.sumByEven(3,8);
         assertThat(result, is(15));
     }
+
+    @Test
+    public void ItIsEven() {
+        int result = (Counter.sumByEven(0,10) % 2);
+        assertThat(result, is(0));
+    }
+
 }
