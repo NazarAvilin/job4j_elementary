@@ -16,8 +16,8 @@ public class ArrayDefinition {
         names[2] = "Коробеиников Стас";
         names[3] = "Авилин Назар";
 
-        System.out.println(names[0] + "\n" + names[1]);
-        System.out.println(names[2] + "\n" + names[3]);
+        System.out.println(names[0] + "\n" + names[1] + "\n"
+                           + names[2] + "\n" + names[3]);
 
     }
 
