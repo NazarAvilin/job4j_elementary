@@ -19,7 +19,8 @@ public class Counter {
 
         int sum = 0;
 
-        for (int i = start; i <= finish; i += 2 ) {
+        for (int i = start; i <= finish; i++) {
+            i += 2;
             sum += i ;
         }
 

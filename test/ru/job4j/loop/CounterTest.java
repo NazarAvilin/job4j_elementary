@@ -15,14 +15,14 @@ public class CounterTest {
 
     @Test
     public void sumByEven() {
-        int result = Counter.sumByEven(0,10);
+        int result = Counter.sumByEven(1,10);
         assertThat(result, is(30));
     }
 
     @Test
     public void whenStart3AndFinish8JustForEven() {
         int result = Counter.sumByEven(3,8);
-        assertThat(result, is(15));
+        assertThat(result, is(13));
     }
 
     @Test
