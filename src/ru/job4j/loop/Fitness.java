@@ -6,7 +6,7 @@ public class Fitness {
 
         int month = 0;
 
-        while (ivan < nik) {
+        while (ivan <= nik) {
 
             month++;
             ivan *= 3;
