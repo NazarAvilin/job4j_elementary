@@ -16,7 +16,13 @@ public class AlgoArray {
 
         System.out.println();
 
-        Arrays.sort(array);
+        temp = array[1];
+        array[1] = array[2];
+        array[2] = temp;
+
+        temp = array[3];
+        array[3] = array[4];
+        array[4] = temp;
 
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
