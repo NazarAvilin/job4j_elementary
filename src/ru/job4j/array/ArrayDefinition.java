@@ -11,13 +11,12 @@ public class ArrayDefinition {
         float[] prices = new float[40];
 
         String[] names = new String[4];
-        names[0] = "Арсентьев Пётр";
-        names[1] = "Шамсемухаметов Раиль";
-        names[2] = "Коробеиников Стас";
+        names[0] = "Арсентьев Пётр" + System.lineSeparator();
+        names[1] = "Шамсемухаметов Раиль" + System.lineSeparator();
+        names[2] = "Коробеиников Стас" + System.lineSeparator();
         names[3] = "Авилин Назар";
 
-        System.out.println(names[0] + "\n" + names[1] + "\n"
-                           + names[2] + "\n" + names[3]);
+        System.out.println(names[0] + names[1] + names[2] + names[3]);
 
     }
 
