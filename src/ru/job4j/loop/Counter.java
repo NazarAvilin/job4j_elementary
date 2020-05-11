@@ -20,8 +20,9 @@ public class Counter {
         int sum = 0;
 
         for (int i = start; i <= finish; i++) {
-            i += 2;
-            sum += i ;
+            if (i % 2 == 0) {
+                sum += i;
+            }
         }
 
         return sum;

@@ -22,7 +22,7 @@ public class CounterTest {
     @Test
     public void whenStart3AndFinish8JustForEven() {
         int result = Counter.sumByEven(3,8);
-        assertThat(result, is(13));
+        assertThat(result, is(18));
     }
 
     @Test
