@@ -5,7 +5,7 @@ public class Defragment {
         for (int index = 0; index < array.length; index++) {
             if (array[index] == null) {
                 int point = index;
-                while ((array[point] == null) && (point < array.length - 1)) {
+                while ((array[point] == null) && (point < array.length -1)) {
                     point++;
                 }
                 array[index] = array[point];
@@ -21,7 +21,7 @@ public class Defragment {
         String[] compressed = compress(input);
         System.out.println();
         for (int index = 0; index < compressed.length; index++) {
-            System.out.print(compressed[index] + " ");
+            System.out.println(compressed[index] + " ");
         }
     }
 }
