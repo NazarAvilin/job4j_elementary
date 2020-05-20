@@ -8,10 +8,10 @@ public class Merge {
         for (int i = 0; i < left.length; i++){
             rsl[i] = left[i];
         }
+
         for (int i = 0; i < right.length; i++){
             rsl[left.length + i] = right[i];
         }
-
 
         return rsl;
     }
