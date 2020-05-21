@@ -66,7 +66,7 @@ public class MergeTest {
     @Test
     public void whenNewTest() {
         Merge algo = new Merge();
-        int[] expect = {7, 8, 9, 11, 1, 2, 3, 10};
+        int[] expect = {1, 2, 3, 7, 8, 9, 10, 11};
         int[] result = algo.merge(
                 new int[] {7, 8, 9, 11},
                 new int[] {1, 2, 3, 10}
