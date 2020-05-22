@@ -2,7 +2,7 @@ package ru.job4j.oop;
 
 public class Jukebox {
 
-    public static void music(int position) {
+    public void music(int position) {
         String letRun = "Пусть бегут неуклюже," + System.lineSeparator()
                         + "Пешеходы по лужам," + System.lineSeparator()
                         + "А вода по асфальту рекой." + System.lineSeparator()
@@ -24,6 +24,8 @@ public class Jukebox {
     }
 
     public static void main(String[] args) {
-        music(1);
+        Jukebox getSong = new Jukebox();
+        getSong.music(1);
+
     }
 }
