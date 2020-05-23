@@ -2,10 +2,16 @@ package ru.job4j.condition;
 
 public class Max {
 
-    public static int max(int left, int right) {
-        boolean condition = left > right;
-        int result = condition ? left : right;
-        return result;
+    public static int max(int first, int second) {
+        return first > second ? first : second;
+    }
+
+    public static int max(int first, int second, int third) {
+        return max(max(first, second), third);
+    }
+
+    public static int max(int first, int second, int third, int fourth) {
+        return max(max(first, second, third), fourth);
     }
 
     public static int summation(int first, int second) {
@@ -13,9 +19,9 @@ public class Max {
         return result;
     }
 
-    public static int totalMax(int max, int summation){
-        max = max(max,summation);
-        summation = summation(summation,max);
+    public static int totalMax(int max, int summation) {
+        max = max(max, summation);
+        summation = summation(summation, max);
         boolean check = max > summation;
         int result = check ? max : summation;
         return result;
