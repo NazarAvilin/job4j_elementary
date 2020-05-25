@@ -42,7 +42,6 @@ public class Tracker {
         return index != -1 ? items[index] : null;
     }
 
-
     private int indexOf(String id) {
         int rsl = -1;
         for (int index = 0; index < position; index++) {
