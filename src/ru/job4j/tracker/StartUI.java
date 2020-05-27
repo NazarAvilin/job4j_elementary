@@ -1,11 +1,8 @@
 package ru.job4j.tracker;
 
-import java.util.Arrays;
-
 public class StartUI {
 
     public void init(Input input, Tracker tracker) {
-
         boolean run = false;
         while (run) {
             this.showMenu();
@@ -19,7 +16,13 @@ public class StartUI {
                 tracker.add(item);
             } else if (select == 1) {
                 System.out.println("==== Show all items ====");
-                System.out.println(Arrays.toString(tracker.findAll()));
+                Item[] temp = tracker.findAll();
+                if (temp.length == 0) {
+                    System.out.println("No records");
+                }
+                for (int i = 0; i < temp.length; i++) {
+                    System.out.println(temp[i]);
+                }
             } else if (select == 2) {
                 System.out.println("==== Edit item ====");
                 System.out.print("Enter id: ");
@@ -44,13 +47,21 @@ public class StartUI {
             } else if (select == 4) {
                 System.out.println("==== Find item by Id ====");
                 System.out.print("Enter id: ");
-                String nameId = input.askStr("Enter id: ");
-                tracker.findById(nameId);
+                String id = input.askStr("Enter id: ");
+                Item tempid = tracker.findById(id);
+                if (tempid == null) {
+                    System.out.println("ID not found");
+                } else {
+                    System.out.println(tempid);
+                }
             } else if (select == 5) {
                 System.out.println("==== Find items by name ====");
                 System.out.print("Enter name: ");
                 String name = input.askStr("Enter name: ");
-                tracker.findByName(name);
+                Item[] tempName = tracker.findByName(name);
+                for (int i = 0; i < tempName.length; i++) {
+                    System.out.println(tempName[i]);
+                }
             } else if (select == 6) {
                 System.out.println("==== Exit Program ====");
                 run = false;
