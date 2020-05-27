@@ -1,6 +1,7 @@
 package ru.job4j.poly;
 
 public interface Transport {
-    String bus(String model);
-    int quantity(int setQuantity);
+    void go();
+    void passenger(int pas);
+    double refuel(double fuel);
 }
