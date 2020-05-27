@@ -11,7 +11,7 @@ public class StartUI {
             switch (select) {
                 case 0 -> StartUI.createItem(input, tracker);
                 case 1 -> StartUI.showItems(input, tracker);
-                case 2 -> StartUI.editItem(input, tracker);
+                case 2 -> StartUI.replaceItem(input, tracker);
                 case 3 -> StartUI.deleteItem(input, tracker);
                 case 4 -> StartUI.findItemById(input, tracker);
                 case 5 -> StartUI.findItemByName(input, tracker);
@@ -58,14 +58,13 @@ public class StartUI {
         }
     }
 
-    public  static void editItem(Input input, Tracker tracker) {
-        System.out.println("==== Edit item ====");
-        System.out.print("Enter id: ");
-        String nameId = input.askStr("Enter nameId: ");
-        System.out.print("Enter replays name: ");
-        String nameNew = input.askStr("Enter new name: ");
-        Item item = new Item(nameNew);
-        if (tracker.replace(nameId, item)) {
+    public  static void replaceItem(Input input, Tracker tracker) {
+        System.out.println("==== Replace item ====");
+        String id = input.askStr("Enter id: ");
+        String name = input.askStr("Enter the item's name: ");
+        Item item = new Item(name);
+        item.setId(id);
+        if (tracker.replace(id, item)) {
             System.out.print("Completed");
         } else {
             System.out.print("Not completed");
@@ -74,8 +73,7 @@ public class StartUI {
 
     public  static void deleteItem(Input input, Tracker tracker) {
         System.out.println("==== Delete item ====");
-        System.out.print("Enter id: ");
-        String nameId = input.askStr("Enter nameId: ");
+        String nameId = input.askStr("Enter id: ");
         if (tracker.delete(nameId)) {
             System.out.print("Completed");
         } else {
