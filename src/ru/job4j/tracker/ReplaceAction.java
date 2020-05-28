@@ -15,7 +15,7 @@ public class ReplaceAction implements UserAction {
         if (tracker.replace(id, item)) {
             System.out.print("Completed");
         } else {
-            System.out.print("Not completed");
+            System.out.println("Not completed");
         }
         return true;
     }
