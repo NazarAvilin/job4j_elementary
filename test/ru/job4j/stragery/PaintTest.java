@@ -9,15 +9,11 @@ import java.util.StringJoiner;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-/**
- * @author Aleksey Petrov
- * @version 1.0
- * @since 0.1
- */
+
 public class PaintTest {
-    // поле содержит дефолтный вывод в консоль.
+
     private final PrintStream stdout = System.out;
-    // буфер для результата.
+
     private final ByteArrayOutputStream out = new ByteArrayOutputStream();
 
     @Before
@@ -54,6 +50,18 @@ public class PaintTest {
                 .add(" +     +")
                 .add("+++++++++")
                 .toString())
+        );
+    }
+
+    @Test
+    public void whenDrawRectangle() {
+        new Paint().draw(new Rectangle());
+        assertThat(this.out.toString(), is(new StringJoiner(System.lineSeparator())
+                        .add("++++++++++++++++++")
+                        .add("+                +")
+                        .add("+                +")
+                        .add("++++++++++++++++++")
+                        .toString())
         );
     }
 }
